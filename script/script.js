@@ -12,6 +12,21 @@ $(function(){
     });
     // GNB 끝
 
+    // 슬라이드쇼 시작
+    setInterval(fnSlide, 3000);
+    
+    function fnSlide() {
+        $("#shuttleFrame").animate(
+            {"margin-left": "-1200px"},
+            2400,
+            function(){
+                $("#slide a:first-child").insertAfter("#slide a:last-child");
+                $("#shuttleFrame").css({"margin-left": "0"});
+            }
+        );
+    }
+    // 슬라이드쇼 끝
+
 
 
 });
